@@ -59,10 +59,7 @@ def RunnerStats(runnername, runnerid, runnernumber):
     paceminutes = np.floor(pacetemp)
    # paceseconds = (((pacetemp) % 1) * 60) #working dont delete
     paceseconds = np.floor(((pacetemp) % 1) * 60)
-    # data['Pace Minutes'] = paceminutes.astype("string").replace('\.0', '', regex=True)
-    # data['Pace Seconds'] = paceseconds.astype("string").replace('\.0', '', regex=True)
-    # data['Pace Seconds']=data['Pace Seconds'].str.zfill(2)
-    # data['Pace (M:S)'] = data['Pace Minutes'] + ":" + data['Pace Seconds']
+    
 
 
     paceminutes = paceminutes.astype("string").replace('\.0', '', regex=True)
@@ -75,24 +72,6 @@ def RunnerStats(runnername, runnerid, runnernumber):
 
 
 
-    # paceminutes = paceminutes.astype("string").replace('\.0', '', regex=True)
-    # paceseconds = paceseconds.astype("string")
-    # data['Pace (M:S)'] = paceminutes + ":" + paceseconds
-
-
-
-    # data['combined']=(str(data['Pace Minutes'])+"test"+str(data['Pace Seconds']))
-
-    # if (data['Time']) < '00:60:00':  # was RunnerDF
-    #     print("more than 1 hour")
-    #     data['Formatted Time'] = pd.to_datetime(data['Time'], format='%M:%S').dt.time  # was RunnerDF
-    # else:
-    #     data['Formatted Time'] = pd.to_datetime(data['Time'], format='%H:%M:%S').dt.time  # UNCOMMENT THIS FOR PRODUCTION
-    #     # data['Formatted Time'] = pd.to_datetime(data['Time'], format='%H:%M:%S').dt.time  # UNCOMMENT THIS FOR PRODUCTION
-
-    # key data for analyzing outside of Excel
-    # print('Earliest date= ',min(RunnerDF['Run Date']))
-    # print('Latest run date= ',max(RunnerDF['Run Date']))
-    # print(RunnerDF[['Run Date','Run Number','Time']])
+    
 
     return data  # was RunnerDF
